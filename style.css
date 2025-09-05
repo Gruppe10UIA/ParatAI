@@ -1765,12 +1765,11 @@ summary {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
     margin-bottom: 2rem;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .footer-column {
-    text-align: left;
+    text-align: center;
 }
 
 
