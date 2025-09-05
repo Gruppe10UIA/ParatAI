@@ -1749,7 +1749,7 @@ summary {
     color: rgb(209 213 219 / 1);
     padding-top: 3rem;
     padding-bottom: 3rem;
-    margin-top: 5rem;
+    margin-top: 0rem;
 }
 
 .footer-container {
@@ -2178,3 +2178,4 @@ summary {
 .group-photo:hover {
     transform: scale(1.02);
 }
+
