@@ -2173,21 +2173,19 @@ summary {
 
 /* Gruppebilde helt ned mot footer */
 .group-photo {
+    display: block;
     max-width: 800px;
-    width: 100%;
+    width: auto;              
+    max-width: 100%;           
     height: auto;
     border-radius: 0.75rem;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-    display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .group-photo-link {
     display: inline-block;
-    max-width: 800px;        
-    width: 100%;
     margin: 1.5rem auto 0; 
-    text-align: center;
 }
 
 .group-photo:hover {
