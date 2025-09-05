@@ -733,6 +733,11 @@ summary {
 .description-text {
     color: rgb(75 85 99 / 1);
     line-height: 1.625;
+    margin-bottom: 1rem;
+}
+
+.description-text:last-child {
+    margin-bottom: 0;
 }
 
 .description-image {
