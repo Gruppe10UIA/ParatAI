@@ -2137,9 +2137,3 @@ summary {
     height: 100%;
     object-fit: cover;
 }
-
-/* Gjør team-seksjonen dobbelt så bred (56rem → 112rem), ellers alt likt */
-.team-introduction-section .container,
-.team-introduction-section .team-container {
-    max-width: 112rem !important;
-}
