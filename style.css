@@ -256,7 +256,7 @@ summary {
 
 .gjs-t-link {
     color: var(--gjs-t-color-primary);
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .gjs-t-border {
@@ -361,11 +361,10 @@ summary {
 .diary-link,
 .status-link,
 .reflection-link {
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 200ms;
-    color: rgb(75 85 99 / 1);
+  font-weight: 600;        /* bold baseline */
+  color: rgb(75 85 99 / 1);
 }
+
 
 .home-link:hover,
 .about-link:hover,
@@ -373,9 +372,18 @@ summary {
 .diary-link:hover,
 .status-link:hover,
 .reflection-link:hover {
-    color: rgb(107 33 168 / 1);
+  color: rgb(107 33 168 / 1);
 }
 
+.home-link.active,
+.about-link.active,
+.assignment-link.active,
+.diary-link.active,
+.status-link.active,
+.reflection-link.active {
+  color: rgb(107 33 168 / 1);
+  font-weight: 600;
+}
 
 /* ========================================
    HERO SECTIONS
