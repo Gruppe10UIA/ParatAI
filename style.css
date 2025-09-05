@@ -2137,3 +2137,51 @@ summary {
     height: 100%;
     object-fit: cover;
 }
+/* ========================================
+   Gruppebilde - forsiden 
+======================================== */
+
+.group-photo {
+    max-width: 800px;        /* maks bredde */
+    width: 100%;             /* skalerer ned på små skjermer */
+    height: auto;            /* bevarer proporsjoner */
+    border-radius: 1rem;     /* avrundede hjørner */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* myk skygge */
+    margin: 2rem auto 0;     /* sentrert med litt luft over */
+    display: block;          /* sørger for at margin: auto funker */
+}
+
+
+
+/* ==========================
+   CUSTOM INDEX PAGE STYLING
+============================= */
+
+/* Mindre luft øverst */
+.hero-section {
+    padding-top: 2rem;     /* var 4rem */
+    padding-bottom: 2rem;  /* litt strammere */
+    background: none;      /* fjernet lys bakgrunn, bruker sidens bakgrunn */
+}
+
+.hero-content-container {
+    padding-top: 2rem;     /* var 8rem tidligere i CSS */
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+/* Gruppebilde helt ned mot footer */
+.group-photo {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    margin: 1.5rem auto 0;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.group-photo:hover {
+    transform: scale(1.02);
+}
