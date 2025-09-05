@@ -740,7 +740,13 @@ summary {
 .description-text {
     color: rgb(75 85 99 / 1);
     line-height: 1.625;
+    margin-bottom: 1.5rem;
 }
+
+.description-text:last-child {
+    margin-bottom: 0;
+}
+
 
 .description-image {
     border-radius: 1rem;
@@ -2143,4 +2149,33 @@ summary {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Mindre luft øverst */
+.hero-section {
+    padding-top: 2rem;     /* var 4rem */
+    padding-bottom: 2rem;  /* litt strammere */
+    background: none;      /* fjernet lys bakgrunn, bruker sidens bakgrunn */
+}
+
+.hero-content-container {
+    padding-top: 2rem;     /* var 8rem tidligere i CSS */
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+/* Gruppebilde helt ned mot footer */
+.group-photo {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    margin: 1.5rem auto 0;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.group-photo:hover {
+    transform: scale(1.02);
 }
