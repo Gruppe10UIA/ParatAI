@@ -733,6 +733,11 @@ summary {
 .description-text {
     color: rgb(75 85 99 / 1);
     line-height: 1.625;
+    margin-bottom: 1rem;
+}
+
+.description-text:last-child {
+    margin-bottom: 0;
 }
 
 .description-image {
@@ -2141,5 +2146,76 @@ summary {
 /* Gjør team-seksjonen dobbelt så bred (56rem → 112rem), ellers alt likt */
 .team-introduction-section .container,
 .team-introduction-section .team-container {
-    max-width: 112rem !important;
+    max-width: 112rem;
+
+ /* ========================================
+   Gruppebilde - forsiden 
+======================================== */
+
+.group-photo {
+    max-width: 800px;        /* maks bredde */
+    width: 100%;             /* skalerer ned på små skjermer */
+    height: auto;            /* bevarer proporsjoner */
+    border-radius: 1rem;     /* avrundede hjørner */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* myk skygge */
+    margin: 2rem auto 0;     /* sentrert med litt luft over */
+    display: block;          /* sørger for at margin: auto funker */
+}
+
+
+
+/* ==========================
+   CUSTOM INDEX PAGE STYLING
+============================= */
+
+/* Mindre luft øverst */
+.hero-section {
+    padding-top: 2rem;     /* var 4rem */
+    padding-bottom: 2rem;  /* litt strammere */
+    background: none;      /* fjernet lys bakgrunn, bruker sidens bakgrunn */
+}
+
+.hero-content-container {
+    padding-top: 2rem;     /* var 8rem tidligere i CSS */
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+/* Gruppebilde helt ned mot footer */
+.group-photo {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    margin: 1.5rem auto 0;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.group-photo:hover {
+    transform: scale(1.02);
+}
+
+/* bakgrunnsbilde */
+
+.bakgrunnsbilde  {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bakgrunnsbilde img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  /* Fader ut bildet til gjennomsiktig nederst */
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
 }
