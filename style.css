@@ -283,8 +283,13 @@ summary {
 
 .container {
     max-width: 56rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
 }
 
 .section-title {
@@ -709,8 +714,8 @@ summary {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     background-image:
-      linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)), 
-      url("https://raw.githubusercontent.com/Gruppe10UIA/ParatAI/main/images/om-oss-bakgrunn.jpeg" alt="Om oss bakgrunn");
+      linear-gradient(to bottom, transparent, rgb(255, 255, 255)), 
+      url("https://raw.githubusercontent.com/Gruppe10UIA/ParatAI/main/images/om-oss-bakgrunn.jpeg");
 }
 
 .content-grid {
@@ -1754,14 +1759,14 @@ summary {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
     margin-bottom: 2rem;
-    flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
 
 .footer-column {
-    text-align: center;
+    text-align: left;
 }
+
 
 .column-title {
     color: rgb(255 255 255 / 1);
