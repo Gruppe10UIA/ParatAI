@@ -2192,3 +2192,21 @@ summary {
     transform: scale(1.02);
 }
 
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 format */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  border-radius: 12px; /* gir avrundede hjørner, kan fjernes */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* liten skygge */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
