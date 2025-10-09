@@ -6,6 +6,7 @@
     <title>Om oss - ParatAI </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="team-rotator.css">
 </head>
 <body class="cls-b0eeaj">
     <!-- Main Navigation -->
@@ -13,14 +14,15 @@
         <div class="navigation-container" id="isatj">
             <div class="navigation-layout" id="i9dob">
                 <div class="logo-container" id="iy2b6">
-                    <a id="i7q7q" href="index.html" style="all:unset;">ParatAI</a>
+                    <a id="i7q7q" href="index.html" style="all:unset; display: flex; align-items: center;">
+                    <img src="images/stor paratai logo.svg" alt="ParatAI" style="height: 40px; width: auto;">
+                    </a>
                 </div>
                 <ul class="navigation-menu" id="i7kr12e">
                     <li><a class="gjs-t-link home-link" href="index.html" id="i07ogcw">Hjem</a></li>
                     <li><a class="gjs-t-link about-link active" href="about.html" id="id3nrli">Om oss</a></li>
                     <li><a class="gjs-t-link assignment-link" href="medlemmer.html" id="ixyl926">Medlemmer</a></li>
                     <li><a class="gjs-t-link reflection-link" href="reflection.html" id="iwnb33s">Prosjekter</a></li>
-                  
                 </ul>
             </div>
         </div>
@@ -30,29 +32,34 @@
     <section class="team-introduction-section">
         <div class="team-container container">
             <h2 class="section-title">Møt vårt team</h2>
-            <div class="team-grid">
+            <div class="team-rotator" role="region" aria-label="Team carousel" data-autoplay="true">
+      <div class="team-grid" data-rotator-grid>
                 <div class="team-member">
                     <div class="member-image">
                         <img src="images/lene-profilbilde.jpg" alt="Lene Olsen">
                     </div>
                     <h3 class="member-name">Lene Olsen</h3>
-                    <p class="member-role">Prosjektleder og potet</p>
+                    <p class="member-role">
+                    Kan fylle roller som:<br>
+                        <strong>Prosjektleder</strong><br>
+                        <strong>UI/UX-designer</strong><br>
+                        <strong>Databaseutvikler</strong>
+                    </p>
                     <p class="member-description">
-                        Startet første faste jobb som grafisk designer og har over 25 år erfaring fra arbeidslivet. Jeg er en engasjert problemløser med sans for detaljer og en genuin interesse for hvordan teknologi kan gjøre hverdagen enklere og bedre for folk. Som bachelorstudent i IT og informasjonssystemer ved Universitetet i Agder har jeg bygget erfaring innen alt fra fullstackutvikling, databaser og GIS til universell utforming og tjenestedesign.
+                        Startet første faste jobb som grafisk designer som 19-åring og har siden da vært potet i små og store bedrifter. Jeg er en engasjert problemløser med sans for detaljer og trives best når jeg kan kombinere struktur og kreativitet, enten det er å analysere datasett, utvikle brukervennlige grensesnitt eller finne smarte måter å løse en utfordring på.
                     </p>
                     <div class="member-skills">
                         <span class="skill-tag">Prosjektledelse</span>
                         <span class="skill-tag">Scrum</span>
                         <span class="skill-tag">Database</span>
-                        <span class="skill-tag">Planlegging</span>
+                        <span class="skill-tag">GIS</span>
                         <span class="skill-tag">C#</span>
                         <span class="skill-tag">UX/UI</span>
                         <span class="skill-tag">Behovsanalyse</span>
-                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Universell utforming</span>
                         <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Grafisk design</span>
                     </div>
-                    <div class="member-socials">
+                     <div class="member-socials">
                         <a href="https://www.linkedin.com/in/lene-olsen-itoginfo/" 
                             target="_blank" rel="noopener noreferrer" 
                             class="social-icon linkedin">
@@ -60,13 +67,18 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="team-member">
                     <div class="member-image">
                         <img src="images/kristian-profilbilde.jpg" alt="Kristian Nielsen">
                     </div>
                     <h3 class="member-name">Kristian Nielsen</h3>
-                    <p class="member-role">Backend-utvikler</p>
+                    <p class="member-role">
+                    Kan fylle roller som:<br>
+                        <strong>Backend-utvikler</strong><br>
+                        <strong>Programvarearkitekt</strong><br>
+                        <strong>Systemutvikler</strong>
+                    </p>
                     <p class="member-description">
                         Hei! Jeg er gjør arbeid innen backend og programmering for gruppen.
                         Jeg er 29 år og har tidligere bachelor i musikkproduksjon og har tidligere jobbet med festivalsikkerhet.
@@ -86,13 +98,18 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="team-member">
                     <div class="member-image">
                         <img src="images/ivar-profilbilde.jpg" alt="Ivar Kaldheim">
                     </div>
                     <h3 class="member-name">Ivar Kaldheim</h3>
-                    <p class="member-role">Fullstack-utvikler</p>
+                    <p class="member-role">
+                    Kan fylle roller som:<br>
+                        <strong>Prosjektleder</strong><br>
+                        <strong>Dataanalytiker</strong><br>
+                        <strong>Produktdesigner</strong>
+                    </p>
                     <p class="member-description">
                         Jeg er 33 år, og har studert biologi tidligere. Har erfaring fra mange ulike roller og arbeidsoppgaver
                         innen oppdrett. I gruppen arbeider jeg både med frontend og backend utvikling. Nå går jeg 3. året på IT og informasjonssystemer.
@@ -111,13 +128,18 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="team-member">
                     <div class="member-image">
                         <img src="images/martin-profilbilde.jpg" alt="Martin Stomnås">
                     </div>
                     <h3 class="member-name">Martin Stomnås</h3>
-                    <p class="member-role">Fullstack-utvikler</p>
+                    <p class="member-role">
+                    Kan fylle roller som:<br>
+                        <strong>Produkteier</strong><br>
+                        <strong>Idéutvikler</strong><br>
+                        <strong>UX-designer</strong>
+                    </p>
                     <p class="member-description">
                        Jeg er 27 år gammel og kommer fra Vennesla. Nå tar jeg en bachelor i IT og informasjonssystemer ved UIA, 
                        og har praksis hos Kartverket.
@@ -137,13 +159,18 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="team-member">
                     <div class="member-image">
                         <img src="images/terje-profilbilde.jpg" alt="Terje Vo Sandvold">
                     </div>
                     <h3 class="member-name">Terje Vo Sandvold</h3>
-                    <p class="member-role">Fullstack-utvikler</p>
+                    <p class="member-role">
+                    Kan fylle roller som:<br>
+                        <strong>Fullstack-utvikler</strong><br>
+                        <strong>Produktdesigner</strong><br>
+                        <strong>QA-ansvarlig</strong>
+                    </p>
                     <p class="member-description">
                         Hei! Jeg er 29 år gammel, fra Trondheim og tar en bachelor innen IT og informasjonssystemer
                         ved Universitetet i Agder. God UX og UI er noe som engasjerer meg da jeg er en veldig detalj-orientert person.
@@ -166,13 +193,18 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="team-member">
                     <div class="member-image">
                         <img src="images/orjan-profilbilde.jpg" alt="Teammedlem 6">
                     </div>
                     <h3 class="member-name">Ørjan Fidje</h3>
-                    <p class="member-role">Fullstack-utvikler</p>
+                    <p class="member-role">
+                    Kan fylle roller som:<br>
+                        <strong>Fullstack-utvikler</strong><br>
+                        <strong>Produktdesigner</strong><br>
+                        <strong>Systemarkitekt</strong>
+                    </p>
                     <p class="member-description">
                         Jeg er 30 år gammel. Jeg har bachelorgrad i lyddesign for film og TV i fra tidligere studier.
                         Herfra har jeg mye erfaring med produksjonsarbeid i team. Jeg ser på meg selv som kreativ, 
@@ -196,110 +228,17 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-    <!-- Project Philosophy Section 
-    <section class="project-overview-section">
-        <div class="overview-container container">
-            <div class="overview-grid">
-                <div class="text-content">
-                    <h2 class="overview-title">Vår tilnærming</h2>
-                    <p class="overview-description">
-                        Vi kombinerer utforskende læring med strukturert utvikling, og holder oss fleksible for å finne den beste løsningen i samarbeid med Kartverket.
-                    </p>
-                    <h3 class="objectives-title">Våre verdier:</h3>
-                    <ul class="objectives-list">
-                        <li class="objective-item">
-                            <span class="bullet-point">•</span>
-                            <span class="objective-text"></span>
-                        </li>
-                        <li class="objective-item">
-                            <span class="bullet-point">•</span>
-                            <span class="objective-text"></span>
-                        </li>
-                        <li class="objective-item">
-                            <span class="bullet-point">•</span>
-                            <span class="objective-text"></span>
-                        </li>
-                        <li class="objective-item">
-                            <span class="bullet-point">•</span>
-                            <span class="objective-text">Kontinuerlig læring og forbedring</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="overview-image-container">
-                    <img src="https://via.placeholder.com/500x400?text=Vårt+Team" alt="Vårt team i arbeid" class="description-image">
-                </div>
-            </div>
+      <div class="rotator-controls">
+        <button class="rotator-btn rotator-prev" type="button" aria-label="Forrige medlem">‹</button>
+        <button class="rotator-btn rotator-play" type="button" aria-pressed="true" aria-label="Pause rotasjon">Pause</button>
+        <button class="rotator-btn rotator-next" type="button" aria-label="Neste medlem">›</button>
+      </div>
+      <div class="rotator-dots" role="tablist" aria-label="Velg medlem"></div>
+    </div>
         </div>
-    </section> -->
+    </section>
 
-    <!-- Skills & Technologies Section 
-    <section class="detailed-description-section">
-        <div class="container">
-            <h2 class="section-title">Ferdigheter & Teknologier</h2>
-            <div class="content-grid">
-                <div class="description-block">
-                    <div class="text-content">
-                            <h3 class="block-title">Teknologier</h3>
-                        <p class="description-text">
-                         
-                        </p>
-                    </div>
-                </div>
 
-                <div class="requirements-block">
-                    <h3 class="block-title">Ferdigheter</h3>
-                    <ul class="requirements-list">
-                        <li class="requirement-item">
-                            <span class="bullet"></span>
-                            <span class="item-text"></span>
-                        </li>
-                        <li class="requirement-item">
-                            <span class="bullet"></span>
-                            <span class="item-text"></span>
-                        </li>
-                        <li class="requirement-item">
-                            <span class="bullet"></span>
-                            <span class="item-text"></span>
-                        </li>
-                        <li class="requirement-item">
-                            <span class="bullet"></span>
-                            <span class="item-text"></span>
-                        </li>
-                        <li class="requirement-item">
-                            <span class="bullet"></span>
-                            <span class="item-text"></span>
-                        </li>
-                        <li class="requirement-item">
-                            <span class="bullet"></span>
-                            <span class="item-text"></span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Contact Section 
-    <section class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Kom i kontakt</h2>
-            <div class="contact-content">
-                <p class="contact-description">
-                    Har du spørsmål om prosjektet vårt eller vil du vite mer om vårt arbeid? 
-                    Vi vil gjerne høre fra deg!
-                </p>
-                <div class="contact-methods">
-                    <a href="mailto:student@university.no" class="gjs-t-link email-link">student@university.no</a>
-                    <a href="tel:+4712345678" class="gjs-t-link phone-link">+47 123 45 678</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/example" class="gjs-t-button github-link" target="_blank" rel="noopener">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- Footer -->
     <footer class="main-footer" id="ijtj418">
@@ -316,5 +255,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="team-rotator.js" defer></script>
 </body>
 </html>

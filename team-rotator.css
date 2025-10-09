@@ -1,0 +1,405 @@
+/* ===== Team Rotator – Styles ===== */
+
+.team-rotator {
+  position: relative;
+  --card-gap: 16px;
+  --anim-dur: 400ms;
+  --pause-initial: 1500ms;
+  --pause-main: 12000ms;
+}
+
+.team-rotator [data-rotator-grid] {
+  position: relative;
+  min-height: 520px;
+}
+
+/* Layer the 6 cards (desktop/tablet) */
+.team-rotator .team-member {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: center top;
+  transition: transform var(--anim-dur) ease, opacity var(--anim-dur) ease, box-shadow var(--anim-dur) ease;
+  width: 520px;
+  opacity: 0.9; /* non-featured depth */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+  /* Right-aligned identity layout inside each card */
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto auto 1fr auto;
+  grid-template-areas:
+    "identity identity"
+    "text     text"
+    "skills   skills"
+    "skills   skills"
+    "socials  socials";
+  padding: 18px;
+}
+
+/* Featured card (pos 1) is bigger + fully opaque */
+.team-rotator .team-member[data-position="1"] {
+  z-index: 6;
+  width: 640px;
+  opacity: 1;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+}
+
+.team-rotator .team-member[data-position="2"] { z-index: 5; }
+.team-rotator .team-member[data-position="6"] { z-index: 5; }
+.team-rotator .team-member[data-position="3"] { z-index: 4; }
+.team-rotator .team-member[data-position="5"] { z-index: 4; }
+.team-rotator .team-member[data-position="4"] { z-index: 3; }
+
+/* Scale: 1.00 for featured, 0.92 for others */
+.team-rotator .team-member[data-position="1"] { transform: translateX(-50%) scale(1); }
+.team-rotator .team-member:not([data-position="1"]) { transform: translateX(-50%) scale(0.38); }
+
+/* Stepped positions (desktop/tablet) — adjust offsets to taste */
+@media (min-width: 768px) {
+  .team-rotator .team-member[data-position="1"] { 
+    transform: translate(-50%, 0) scale(1);
+  }
+  .team-rotator .team-member[data-position="2"] { 
+    transform: translate(calc(-50% + 420px), 110px) scale(0.38);
+  }
+  .team-rotator .team-member[data-position="6"] { 
+    transform: translate(calc(-50% - 420px), 110px) scale(0.38);
+  }
+  .team-rotator .team-member[data-position="3"] { 
+    transform: translate(calc(-50% + 260px), 270px) scale(0.38);
+  }
+  .team-rotator .team-member[data-position="5"] { 
+    transform: translate(calc(-50% - 260px), 270px) scale(0.38);
+  }
+  .team-rotator .team-member[data-position="4"] { 
+    transform: translate(-50%, 320px) scale(0.38);
+    width: 640px;
+  }
+}
+
+
+/* Controls */
+.rotator-controls {
+  margin-top: 14px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+.rotator-btn {
+  appearance: none;
+  border: 1px solid #ccc;
+  background: #fff;
+  font: inherit;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.rotator-btn:focus-visible {
+  outline: 3px solid #2b7cff;
+  outline-offset: 2px;
+}
+
+/* Dots */
+.rotator-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 10px;
+}
+.rotator-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid #777;
+  background: #ddd;
+  cursor: pointer;
+}
+.rotator-dot[aria-selected="true"] {
+  background: #222;
+  border-color: #222;
+}
+.rotator-dot:focus-visible {
+  outline: 3px solid #2b7cff;
+  outline-offset: 2px;
+}
+
+/* Right-aligned identity */
+.team-rotator .team-member .member-image {
+  grid-area: identity;
+  justify-self: end;
+}
+.team-rotator .team-member .member-image img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 8px;
+  margin-left: 14px;
+}
+.team-rotator .team-member .member-name {
+  grid-area: identity;
+  text-align: left;
+  margin: 0;
+}
+
+.team-rotator .team-member .member-role {
+  grid-area: identity;
+  justify-self: end;
+  text-align: right;
+  margin: 0;
+}
+
+/* "KAN FYLLE ROLLER SOM" */
+.team-rotator .team-member .role-label {
+  display: block;
+  font-size: 0.3rem;
+  letter-spacing: 0.03em;
+  color: #7a7a7a;        
+  font-weight: 300;   
+  margin-bottom: 4px;
+}
+
+/* Selve rollene */
+.team-rotator .team-member .member-role strong {
+  display: inline-block;
+  font-weight: 600;
+  color: #111;        
+}
+
+.team-rotator .team-member .member-name {
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  line-height: 1.15;
+  max-width: 18ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Content blocks */
+.team-rotator .team-member .member-description { grid-area: text; margin-top: 1px; }
+.team-rotator .team-member .member-skills { grid-area: skills; margin-top: 3px; }
+.team-rotator .team-member .member-socials { grid-area: socials; margin-top: 3px; }
+
+/* Instant jump helper */
+.team-rotator.no-animate .team-member { transition: none !important; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .team-rotator .team-member { transition: none !important; }
+}
+
+/* ===== Overrides to main styles ===== */
+/* Fjern hvit “kort”-bakgrunn i team-seksjonen */
+.team-introduction-section .container,
+.team-introduction-section .team-container {
+  background: transparent !important;  
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* Ta bort ekstra luft over/under hvis det kommer fra seksjonen */
+.team-introduction-section {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important; 
+  background-image:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5)),
+    url("https://raw.githubusercontent.com/Gruppe10UIA/ParatAI/main/images/om-oss-bakgrunn.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Løft rotatoren  */
+.team-rotator {
+  margin-top: -30px; 
+}
+
+/* Override style.css grid for rotator */
+.team-rotator [data-rotator-grid] {
+  display: block !important; /* Override CSS grid */
+  grid-template-columns: unset !important;
+  gap: 0 !important;
+}
+
+/* ---------------------- */
+/* Intro mode (desktop)   */
+/* ---------------------- */
+@media (min-width: 768px) {
+  .team-rotator.intro .member-role,
+  .team-rotator.intro .member-roles,
+  .team-rotator.intro .member-description,
+  .team-rotator.intro .member-skills,
+  .team-rotator.intro .member-socials {
+    opacity: 0;
+    max-height: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+  }
+
+  .team-rotator.intro .member-image img {
+    transform: scale(1.25);
+    transition: transform 0.5s ease;
+  }
+
+  .team-rotator.intro .member-name {
+    transition: opacity 0.3s ease;
+    opacity: 1;
+  }
+}
+
+/* Override style.css grid for rotator */
+.team-rotator [data-rotator-grid] {
+  display: block !important;
+  grid-template-columns: unset !important;
+  gap: 0 !important;
+}
+
+/* Mobile styles */
+@media (max-width: 767.98px) {
+  /* Make rotator a flex container to reorder children */
+  .team-rotator { 
+    padding-inline: 16px;
+    overflow: hidden;
+    position: relative;
+    display: flex !important;
+    flex-direction: column;
+  }
+  
+  /* Move dots to the top with flexbox order */
+  .rotator-dots {
+    order: 1 !important;
+    display: flex !important;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  /* Grid comes second */
+  .team-rotator [data-rotator-grid] { 
+    order: 2 !important;
+    min-height: unset;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Controls come third (but positioned absolutely) */
+  .rotator-controls {
+    order: 3 !important;
+    position: absolute;
+    top: 180px; /* Adjust this value to position arrows at the right height */
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    padding: 0 10px;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .rotator-btn {
+    pointer-events: auto;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    font-size: 24px;
+    padding: 0;
+    border: 1px solid #ddd;
+  }
+  
+  /* Hide play button on mobile */
+  .rotator-play {
+    display: none !important;
+  }
+  
+  .rotator-prev {
+    order: 1;
+  }
+  
+  .rotator-next {
+    order: 2;
+  }
+  
+  .team-rotator .team-member {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+    opacity: 1 !important;
+    box-sizing: border-box;
+    display: none;
+    padding: 20px;
+    margin: 0;
+    
+    /* Separate grid areas for mobile */
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "image"
+      "name"
+      "role"
+      "text"
+      "skills"
+      "socials" !important;
+  }
+  
+  .team-rotator .team-member[data-position="1"] {
+    display: grid !important;
+    width: 100% !important;
+  }
+
+  /* Reassign grid areas for mobile */
+  .team-rotator .team-member .member-image {
+    grid-area: image !important;
+    justify-self: center !important;
+    margin: 0 auto 1rem !important;
+  }
+  
+  .team-rotator .team-member .member-image img {
+    width: 120px !important;
+    height: 120px !important;
+    margin: 0 !important;
+  }
+  
+  .team-rotator .team-member .member-name {
+    grid-area: name !important;
+    font-size: 1.25rem !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    white-space: normal !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .team-rotator .team-member .member-role {
+    grid-area: role !important;
+    text-align: center !important;
+    justify-self: center !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .team-rotator .team-member .member-description {
+    font-size: 0.95rem !important;
+    text-align: left !important;
+    line-height: 1.5 !important;
+  }
+  
+  .team-rotator .team-member .member-skills {
+    justify-content: center !important;
+  }
+  
+  .team-rotator .team-member .member-socials {
+    text-align: center !important;
+  }
+}
