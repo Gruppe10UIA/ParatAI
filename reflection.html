@@ -38,7 +38,7 @@
                     <div class="text-content">
                         <h3 class="block-title"><strong>Praksis</strong></h3>
                         <p class="description-text">
-                           Etter flere vellykkede samarbeidsprosjekter med Kartverket er gruppen nå i praksis der. Arbeidet fokuserer på å kartlegge kommunale brukerbehov relatert til kart og beredskap, som del av Kartverkets pågående utviklingsarbeid.
+                           Etter vellykkede samarbeidsprosjekter med Kartverket involvert er gruppen nå i praksis der. Arbeidet fokuserer på å kartlegge kommunale brukerbehov relatert til kart og beredskap, som del av Kartverkets pågående utviklingsarbeid.
                         </p>
                     </div>
                 </div>
@@ -83,19 +83,26 @@
                     <div class="text-content">
                         <h3 class="block-title"><strong>Universell utforming og værtjenester</strong></h3>
                         <p class="description-text">
-                           Vi gjennomførte en omfattende evaluering av YR.no med fokus på universell utforming og digital tilgjengelighet. Gjennom en kombinasjon av automatiserte tester, PACT-analyse, simuleringer og brukertesting identifiserte vi flere barrierer knyttet til syn, motorikk og kognisjon. Basert på funnene utviklet vi en ny prototype – dis – som viser hvordan en værtjeneste kan designes universelt fra grunnen av. Prosjektet ga oss praktisk erfaring med WCAG-standarder, heuristisk evaluering, brukertesting, og design av inkluderende grensesnitt i Figma.
+                           Vi gjennomførte en omfattende evaluering av YR.no med fokus på universell utforming og digital tilgjengelighet. Gjennom en kombinasjon av automatiserte tester, PACT-analyse, simuleringer og brukertesting identifiserte vi flere barrierer knyttet til syn, motorikk og kognisjon. Prosjektet ga oss praktisk erfaring med WCAG-standarder, heuristisk evaluering, brukertesting i designet av ett nytt inkluderende grensesnitt i Figma.
                         </p>
-                       
+                       <div class="image-row">
+                        <img src="images/Innstillinger.svg" alt="Instillinger visning for prototype" class="description-image zoomable" title="🔍 Klikk for å vise større bilde">
+                        <img src="images/Innstillinger - tilpass utseende.svg" alt="Tilpass utseende-visning for prototype" class="description-image zoomable" title="🔍 Klikk for å vise større bilde">
+                       </div>
                     </div>
                 </div>
+            </div>
 
                      <div class="description-block">
                     <div class="text-content">
                         <h3 class="block-title"><strong>Database­design og implementasjon</strong></h3>
                         <p class="description-text">
-                           I løpet av studiet har vi utviklet en komplett relasjonsdatabase for en utleie tjeneste for elektriske sykler – fra konseptuell modellering til implementasjon i SQL og PL/pgSQL. Arbeidet inkluderte prosedyrer, triggere og feilhåndtering, samt funksjonalitet for geografiske data gjennom PostGIS, med vekt på dataintegritet og optimal ytelse. Gjennom prosjektet fikk vi praktisk forståelse for hvordan teoretiske prinsipper omsettes til fungerende løsninger, og hvordan strukturert design bidrar til pålitelige og skalerbare systemer.
+                           I løpet av studiet har vi utviklet en komplett relasjonsdatabase for en utleie tjeneste for elektriske sykler – fra konseptuell modellering til implementasjon i SQL og PL/pgSQL. Arbeidet inkluderte prosedyrer, triggere og feilhåndtering, samt funksjonalitet for geografiske data gjennom PostGIS, med vekt på dataintegritet og optimal ytelse.
                         </p>
-                       
+                      <div class="image-single">
+                           <img src="images/IS-309-Assignment_1_ERD.svg" alt="ER-diagram for databasestruktur" class="description-image zoomable" title="🔍 Klikk for å vise større bilde">
+                        </div>
+ 
                     </div>
                 </div>
             </div>
@@ -118,6 +125,14 @@
             </div>
         </div>
     </footer>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="image-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalImage" >
+    <button class="close-modal" aria-label="Lukk bilde">&times;</button>
+    <img id="modalImage" src="" alt="">
+    </div>
+
+    <script src="image-modal.js" defer></script>
 </body>
 </html>
 
