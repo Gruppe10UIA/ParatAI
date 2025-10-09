@@ -149,7 +149,7 @@ function stepBackward() {
     
     if (btnPlay) {
       btnPlay.setAttribute('aria-pressed', 'false');
-      btnPlay.textContent = 'Spill av';
+      btnPlay.textContent = 'Start';
       btnPlay.setAttribute('aria-label', 'Start rotasjon');
     }
   }
@@ -159,7 +159,7 @@ function stepBackward() {
     rotator.dataset.autoplay = 'true';
     if (btnPlay) {
       btnPlay.setAttribute('aria-pressed', 'true');
-      btnPlay.textContent = 'Pause';
+      btnPlay.textContent = 'Stopp';
       btnPlay.setAttribute('aria-label', 'Pause rotasjon');
     }
     scheduleNext();
