@@ -3,252 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om oss - ParatAI </title>
+    <title>Medlemmer - ParatAI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="team-rotator.css">
 </head>
 <body class="cls-b0eeaj">
     <!-- Main Navigation -->
-    <nav class="main-navigation" id="iq5uw">
+    <nav class="main-navigation" id="iq5uw" aria-label="Hovednavigasjon">
         <div class="navigation-container" id="isatj">
             <div class="navigation-layout" id="i9dob">
                 <div class="logo-container" id="iy2b6">
-                    <a id="i7q7q" href="index.html" style="all:unset; display: flex; align-items: center;">
-                    <img src="images/stor paratai logo.svg" alt="ParatAI" style="height: 40px; width: auto;">
+                    <a id="i7q7q" href="index.html" aria-label="ParatAI hjem" style="all:unset; display: flex; align-items: center;">
+                        <img src="images/stor paratai logo.svg" alt="ParatAI logo">
                     </a>
                 </div>
                 <ul class="navigation-menu" id="i7kr12e">
                     <li><a class="gjs-t-link home-link" href="index.html" id="i07ogcw">Hjem</a></li>
                     <li><a class="gjs-t-link about-link" href="about.html" id="id3nrli">Om oss</a></li>
-                    <li><a class="gjs-t-link assignment-link active" href="medlemmer.html" id="ixyl926">Medlemmer</a></li>
+                    <li><a class="gjs-t-link assignment-link active" href="medlemmer.html" id="ixyl926" aria-current="page">Medlemmer</a></li>
                     <li><a class="gjs-t-link reflection-link" href="reflection.html" id="iwnb33s">Prosjekter</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Team Introduction Section -->
-    <section class="team-introduction-section">
-        <div class="team-container container">
-            <h2 class="section-title">Møt vårt team</h2>
-            <div class="team-rotator" role="region" aria-label="Team carousel" data-autoplay="true">
-      <div class="team-grid" data-rotator-grid>
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="images/lene-profilbilde.jpg" alt="Lene Olsen">
-                    </div>
-                    <h3 class="member-name">Lene Olsen</h3>
-                    <p class="member-role">
-                    Kan fylle roller som:<br>
-                        <strong>Prosjektleder</strong><br>
-                        <strong>UI/UX-designer</strong><br>
-                        <strong>Databaseutvikler</strong>
-                    </p>
-                    <p class="member-description">
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Team Introduction Section -->
+        <section class="team-introduction-section" aria-labelledby="team-heading">
+            <div class="team-container container">
+                <h1 id="team-heading" class="section-title">Møt vårt team</h1>
+                <div class="team-rotator" role="region" aria-label="Team medlemmer karusell" data-autoplay="true">
+                    <div class="team-grid" data-rotator-grid>
+                        <article class="team-member">
+                            <div class="member-image">
+                                <img src="images/lene-profilbilde.jpg" alt="Lene Olsen profilbilde">
+                            </div>
+                            <h2 class="member-name">Lene Olsen</h2>
+                            <p class="member-role">
+                                Kan fylle roller som:<br>
+                                <strong>Prosjektleder</strong><br>
+                                <strong>UI/UX-designer</strong><br>
+                                <strong>Databaseutvikler</strong>
+                            </p>
+                            <p class="member-description">
+                                Startet karrieren som grafisk designer som 19-åring, og har siden opparbeidet meg bred erfaring gjennom ulike yrker og ansvarsområder. Jeg er en engasjert problemløser med sans for detaljer og trives best når jeg kan kombinere struktur og kreativitet – enten det er å analysere datasett, utvikle brukervennlige grensesnitt eller finne gode måter å løse en utfordring på.
+                            </p>
+                            <div class="member-skills">
+                                <span class="skill-tag">Prosjektledelse</span>
+                                <span class="skill-tag">Scrum</span>
+                                <span class="skill-tag">Database</span>
+                                <span class="skill-tag">GIS</span>
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">UX/UI</span>
+                                <span class="skill-tag">Behovsanalyse</span>
+                                <span class="skill-tag">Universell utforming</span>
+                                <span class="skill-tag">JavaScript</span>
+                            </div>
+                            <div class="member-socials">
+                                <a href="https://www.linkedin.com/in/lene-olsen-itoginfo/" 
+                                    target="_blank" rel="noopener noreferrer" 
+                                    class="social-icon linkedin"
+                                    aria-label="Lene Olsen på LinkedIn">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </article>
 
-                        Startet karrieren som grafisk designer som 19-åring, og har siden opparbeidet meg bred erfaring gjennom ulike yrker og ansvarsområder. Jeg er en engasjert problemløser med sans for detaljer og trives best når jeg kan kombinere struktur og kreativitet – enten det er å analysere datasett, utvikle brukervennlige grensesnitt eller finne gode måter å løse en utfordring på.
+                        <article class="team-member">
+                            <div class="member-image">
+                                <img src="images/kristian-profilbilde.jpg" alt="Kristian Nielsen profilbilde">
+                            </div>
+                            <h2 class="member-name">Kristian Nielsen</h2>
+                            <p class="member-role">
+                                Kan fylle roller som:<br>
+                                <strong>Backend-utvikler</strong><br>
+                                <strong>Programvarearkitekt</strong><br>
+                                <strong>Systemutvikler</strong>
+                            </p>
+                            <p class="member-description">
+                                Hei! Jeg er gjør arbeid innen backend og programmering for gruppen.
+                                Jeg er 29 år og har tidligere bachelor i musikkproduksjon og har tidligere jobbet med festivalsikkerhet.
+                                Nå studerer jeg 3. året på IT og informasjonssystemer ved UiA, hvor jeg også er i praksis hos Kartverket.
+                            </p>
+                            <div class="member-skills">
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">Database</span>
+                                <span class="skill-tag">Webutvikling</span>
+                                <span class="skill-tag">Python</span>
+                            </div>
+                            <div class="member-socials">
+                                <a href="https://www.linkedin.com/in/kristian-nielsen-88b4a12b0" 
+                                    target="_blank" rel="noopener noreferrer" 
+                                    class="social-icon linkedin"
+                                    aria-label="Kristian Nielsen på LinkedIn">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </article>
 
-                    </p>
-                    <div class="member-skills">
-                        <span class="skill-tag">Prosjektledelse</span>
-                        <span class="skill-tag">Scrum</span>
-                        <span class="skill-tag">Database</span>
-                        <span class="skill-tag">GIS</span>
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">UX/UI</span>
-                        <span class="skill-tag">Behovsanalyse</span>
-                        <span class="skill-tag">Universell utforming</span>
-                        <span class="skill-tag">JavaScript</span>
-                    </div>
-                     <div class="member-socials">
-                        <a href="https://www.linkedin.com/in/lene-olsen-itoginfo/" 
-                            target="_blank" rel="noopener noreferrer" 
-                            class="social-icon linkedin">
-                                <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
+                        <article class="team-member">
+                            <div class="member-image">
+                                <img src="images/ivar-profilbilde.jpg" alt="Ivar Kaldheim profilbilde">
+                            </div>
+                            <h2 class="member-name">Ivar Kaldheim</h2>
+                            <p class="member-role">
+                                Kan fylle roller som:<br>
+                                <strong>Prosjektleder</strong><br>
+                                <strong>Dataanalytiker</strong><br>
+                                <strong>Produktdesigner</strong>
+                            </p>
+                            <p class="member-description">
+                                Jeg er 33 år, og har studert biologi tidligere. Har erfaring fra mange ulike roller og arbeidsoppgaver
+                                innen oppdrett. I gruppen arbeider jeg både med frontend og backend utvikling. Nå går jeg 3. året på IT og informasjonssystemer.
+                            </p>
+                            <div class="member-skills">
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">QGIS</span>
+                                <span class="skill-tag">Webutvikling</span>
+                            </div>
+                            <div class="member-socials">
+                                <a href="https://www.linkedin.com/in/ivar-kaldheim-1b3a85135/" 
+                                    target="_blank" rel="noopener noreferrer" 
+                                    class="social-icon linkedin"
+                                    aria-label="Ivar Kaldheim på LinkedIn">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </article>
 
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="images/kristian-profilbilde.jpg" alt="Kristian Nielsen">
-                    </div>
-                    <h3 class="member-name">Kristian Nielsen</h3>
-                    <p class="member-role">
-                    Kan fylle roller som:<br>
-                        <strong>Backend-utvikler</strong><br>
-                        <strong>Programvarearkitekt</strong><br>
-                        <strong>Systemutvikler</strong>
-                    </p>
-                    <p class="member-description">
-                        Hei! Jeg er gjør arbeid innen backend og programmering for gruppen.
-                        Jeg er 29 år og har tidligere bachelor i musikkproduksjon og har tidligere jobbet med festivalsikkerhet.
-                        Nå studerer jeg 3. året på IT og informasjonssystemer ved UiA, hvor jeg også er i praksis hos Kartverket.
-                    </p>
-                    <div class="member-skills">
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">Database</span>
-                        <span class="skill-tag">Webutvikling</span>
-                        <span class="skill-tag">Python</span>
-                    </div>
-                    <div class="member-socials">
-                        <a href="https://www.linkedin.com/in/kristian-nielsen-88b4a12b0" 
-                            target="_blank" rel="noopener noreferrer" 
-                            class="social-icon linkedin">
-                                <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
+                        <article class="team-member">
+                            <div class="member-image">
+                                <img src="images/martin-profilbilde.jpg" alt="Martin Stomnås profilbilde">
+                            </div>
+                            <h2 class="member-name">Martin Stomnås</h2>
+                            <p class="member-role">
+                                Kan fylle roller som:<br>
+                                <strong>Produkteier</strong><br>
+                                <strong>Idéutvikler</strong><br>
+                                <strong>UX-designer</strong>
+                            </p>
+                            <p class="member-description">
+                                Jeg er 27 år gammel og kommer fra Vennesla. Nå tar jeg en bachelor i IT og informasjonssystemer ved UIA, 
+                                og har praksis hos Kartverket.
+                            </p>
+                            <div class="member-skills">
+                                <span class="skill-tag">Webutvikling</span>
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">Python</span>                        
+                                <span class="skill-tag">Scrum</span>
+                            </div>
+                            <div class="member-socials">
+                                <a href="https://www.linkedin.com/in/martin-stomn%C3%A5s-4a5b83340/"
+                                    target="_blank" rel="noopener noreferrer" 
+                                    class="social-icon linkedin"
+                                    aria-label="Martin Stomnås på LinkedIn">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </article>
 
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="images/ivar-profilbilde.jpg" alt="Ivar Kaldheim">
-                    </div>
-                    <h3 class="member-name">Ivar Kaldheim</h3>
-                    <p class="member-role">
-                    Kan fylle roller som:<br>
-                        <strong>Prosjektleder</strong><br>
-                        <strong>Dataanalytiker</strong><br>
-                        <strong>Produktdesigner</strong>
-                    </p>
-                    <p class="member-description">
-                        Jeg er 33 år, og har studert biologi tidligere. Har erfaring fra mange ulike roller og arbeidsoppgaver
-                        innen oppdrett. I gruppen arbeider jeg både med frontend og backend utvikling. Nå går jeg 3. året på IT og informasjonssystemer.
-                    </p>
-                    <div class="member-skills">
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">QGIS</span>
-                        <span class="skill-tag">Webutvikling</span>
-                    </div>
-                    <div class="member-socials">
-                        <a href="https://www.linkedin.com/in/ivar-kaldheim-1b3a85135/" 
-                            target="_blank" rel="noopener noreferrer" 
-                            class="social-icon linkedin">
-                                <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
+                        <article class="team-member">
+                            <div class="member-image">
+                                <img src="images/terje-profilbilde.jpg" alt="Terje Vo Sandvold profilbilde">
+                            </div>
+                            <h2 class="member-name">Terje Vo Sandvold</h2>
+                            <p class="member-role">
+                                Kan fylle roller som:<br>
+                                <strong>Fullstack-utvikler</strong><br>
+                                <strong>Produktdesigner</strong><br>
+                                <strong>QA-ansvarlig</strong>
+                            </p>
+                            <p class="member-description">
+                                Hei! Jeg er 29 år gammel, fra Trondheim og tar en bachelor innen IT og informasjonssystemer
+                                ved Universitetet i Agder. God UX og UI er noe som engasjerer meg da jeg er en veldig detalj-orientert person.
+                                Tidligere erfaring fra byggebransjen, noe som lærte meg å følge faste planer og rutiner, samt å være tilpasningsdyktig
+                                i møte med kunder.
+                            </p>
+                            <div class="member-skills">
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">Python</span>                        
+                                <span class="skill-tag">Scrum</span>
+                            </div>
+                            <div class="member-socials">
+                                <a href="https://www.linkedin.com/in/terje-vo-sandvold-bbba32326/" 
+                                    target="_blank" rel="noopener noreferrer" 
+                                    class="social-icon linkedin"
+                                    aria-label="Terje Vo Sandvold på LinkedIn">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </article>
 
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="images/martin-profilbilde.jpg" alt="Martin Stomnås">
+                        <article class="team-member">
+                            <div class="member-image">
+                                <img src="images/orjan-profilbilde.jpg" alt="Ørjan Fidje profilbilde">
+                            </div>
+                            <h2 class="member-name">Ørjan Fidje</h2>
+                            <p class="member-role">
+                                Kan fylle roller som:<br>
+                                <strong>Fullstack-utvikler</strong><br>
+                                <strong>Produktdesigner</strong><br>
+                                <strong>Systemarkitekt</strong>
+                            </p>
+                            <p class="member-description">
+                                Jeg er 30 år gammel. Jeg har bachelorgrad i lyddesign for film og TV i fra tidligere studier.
+                                Herfra har jeg mye erfaring med produksjonsarbeid i team. Jeg ser på meg selv som kreativ, 
+                                og ønsker å kombinere kreativiteten med IT, derfor tar jeg nå en bachelor i IT og informasjonssystemer ved UiA.
+                            </p>
+                            <div class="member-skills">
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">C++</span>
+                            </div>
+                            <div class="member-socials">
+                                <a href="https://www.linkedin.com/in/%C3%B8rjan-fidje/" 
+                                    target="_blank" rel="noopener noreferrer" 
+                                    class="social-icon linkedin"
+                                    aria-label="Ørjan Fidje på LinkedIn">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </article>
                     </div>
-                    <h3 class="member-name">Martin Stomnås</h3>
-                    <p class="member-role">
-                    Kan fylle roller som:<br>
-                        <strong>Produkteier</strong><br>
-                        <strong>Idéutvikler</strong><br>
-                        <strong>UX-designer</strong>
-                    </p>
-                    <p class="member-description">
-                       Jeg er 27 år gammel og kommer fra Vennesla. Nå tar jeg en bachelor i IT og informasjonssystemer ved UIA, 
-                       og har praksis hos Kartverket.
-                    </p>
-                    <div class="member-skills">
-                         <span class="skill-tag">Webutvikling</span>
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Python</span>                        
-                        <span class="skill-tag">Scrum</span>
+                    <div class="rotator-controls">
+                        <button class="rotator-btn rotator-prev" type="button" aria-label="Forrige medlem">‹</button>
+                        <button class="rotator-btn rotator-play" type="button" aria-pressed="true" aria-label="Pause rotasjon">Pause</button>
+                        <button class="rotator-btn rotator-next" type="button" aria-label="Neste medlem">›</button>
                     </div>
-                    <div class="member-socials">
-                       <a href="https://www.linkedin.com/in/martin-stomn%C3%A5s-4a5b83340/"
-                            target="_blank" rel="noopener noreferrer" 
-                            class="social-icon linkedin">
-                                <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="images/terje-profilbilde.jpg" alt="Terje Vo Sandvold">
-                    </div>
-                    <h3 class="member-name">Terje Vo Sandvold</h3>
-                    <p class="member-role">
-                    Kan fylle roller som:<br>
-                        <strong>Fullstack-utvikler</strong><br>
-                        <strong>Produktdesigner</strong><br>
-                        <strong>QA-ansvarlig</strong>
-                    </p>
-                    <p class="member-description">
-                        Hei! Jeg er 29 år gammel, fra Trondheim og tar en bachelor innen IT og informasjonssystemer
-                        ved Universitetet i Agder. God UX og UI er noe som engasjerer meg da jeg er en veldig detalj-orientert person.
-                        Tidligere erfaring fra byggebransjen, noe som lærte meg å følge faste planer og rutiner, samt å være tilpasningsdyktig
-                        i møte med kunder.
-                    </p>
-                    <div class="member-skills">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Python</span>                        
-                        <span class="skill-tag">Scrum</span>
-                    </div>
-                    <div class="member-socials">
-                        <a href="https://www.linkedin.com/in/terje-vo-sandvold-bbba32326/" 
-                            target="_blank" rel="noopener noreferrer" 
-                            class="social-icon linkedin">
-                                <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="images/orjan-profilbilde.jpg" alt="Teammedlem 6">
-                    </div>
-                    <h3 class="member-name">Ørjan Fidje</h3>
-                    <p class="member-role">
-                    Kan fylle roller som:<br>
-                        <strong>Fullstack-utvikler</strong><br>
-                        <strong>Produktdesigner</strong><br>
-                        <strong>Systemarkitekt</strong>
-                    </p>
-                    <p class="member-description">
-                        Jeg er 30 år gammel. Jeg har bachelorgrad i lyddesign for film og TV i fra tidligere studier.
-                        Herfra har jeg mye erfaring med produksjonsarbeid i team. Jeg ser på meg selv som kreativ, 
-                        og ønsker å kombinere kreativiteten med IT, derfor tar jeg nå en bachelor i IT og informasjonssystemer ved UiA.
-                    </p>
-                    <div class="member-skills">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C++</span>
-                    </div>
-                    <div class="member-socials">
-                        <a href="https://www.linkedin.com/in/%C3%B8rjan-fidje/" 
-                            target="_blank" rel="noopener noreferrer" 
-                            class="social-icon linkedin">
-                                <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
+                    <div class="rotator-dots" role="group" aria-label="Velg medlem"></div>
                 </div>
             </div>
-      <div class="rotator-controls">
-        <button class="rotator-btn rotator-prev" type="button" aria-label="Forrige medlem">‹</button>
-        <button class="rotator-btn rotator-play" type="button" aria-pressed="true" aria-label="Pause rotasjon">Pause</button>
-        <button class="rotator-btn rotator-next" type="button" aria-label="Neste medlem">›</button>
-      </div>
-      <div class="rotator-dots" role="tablist" aria-label="Velg medlem"></div>
-    </div>
-        </div>
-    </section>
-
-
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="main-footer" id="ijtj418">
         <div class="footer-container">
             <div class="footer-content" id="iehhin-2">
                 <div class="footer-column">
-                    <h4 class="column-title">Kontakt:</h4>
-                    <div class="contact-info">leneo12@student.uia.no</div>
+                    <h2 class="column-title">Kontakt:</h2>
+                    <div class="contact-info">
+                    <a href="mailto:leneo12@student.uia.no">leneo12@student.uia.no</a>
+                    </div>
                     <div class="project-info">IS-310 Prosjektgjennomføring</div>
                 </div>
             </div>

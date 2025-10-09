@@ -1322,4 +1322,41 @@ summary {
   outline: 3px solid #fff;
 }
 
+/* ===== Custom Focus Styles for Keyboard Navigation ===== */
 
+/* Hovedfokus-stil */
+*:focus-visible {
+  outline: 3px solid #FF1493; /* Magenta/rosa */
+  outline-offset: 2px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 5px rgba(255, 20, 147, 0.3); /* Glød-effekt */
+}
+
+/* Fallback for eldre browsere */
+*:focus {
+  outline: 3px solid #FF1493;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px rgba(255, 20, 147, 0.3);
+}
+
+/* Fjern fokus ved museklikk (moderne browsere) */
+*:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+/* E-postlenke i footer */
+footer .contact-info a {
+  text-decoration: underline; /* Permanent understrek */
+  text-underline-offset: 3px; /* Litt luft under teksten */
+}
+
+footer .contact-info a:hover {
+  color: #FFD700; /* Gul ved hover */
+  text-decoration: underline;
+}
+
+footer .contact-info a:focus-visible {
+  outline: 3px solid #FFD700; /* Match din gule fokus */
+  outline-offset: 2px;
+}

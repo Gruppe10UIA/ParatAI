@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ParatAI </title>
+    <title>ParatAI</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="cls-b0eeaj">
     <!-- Main Navigation -->
-    <nav class="main-navigation" id="iq5uw">
+    <nav class="main-navigation" id="iq5uw" aria-label="Hovednavigasjon">
         <div class="navigation-container" id="isatj">
             <div class="navigation-layout" id="i9dob">
                 <div class="logo-container" id="iy2b6">
-                    <a id="i7q7q" href="index.html" style="all:unset; display: flex; align-items: center;">
-                    <img src="images/stor paratai logo.svg" alt="ParatAI" style="height: 40px; width: auto;">
+                    <a id="i7q7q" href="index.html" aria-label="ParatAI hjem" style="all:unset; display: flex; align-items: center;">
+                        <img src="images/stor paratai logo.svg" alt="ParatAI logo">
                     </a>
                 </div>
                 <ul class="navigation-menu" id="i7kr12e">
-                    <li><a class="gjs-t-link home-link active" href="index.html" id="i07ogcw">Hjem</a></li>
+                    <li><a class="gjs-t-link home-link active" href="index.html" id="i07ogcw" aria-current="page">Hjem</a></li>
                     <li><a class="gjs-t-link about-link" href="about.html" id="id3nrli">Om oss</a></li>
                     <li><a class="gjs-t-link assignment-link" href="medlemmer.html" id="ixyl926">Medlemmer</a></li>
                     <li><a class="gjs-t-link reflection-link" href="reflection.html" id="iwnb33s">Prosjekter</a></li>
@@ -26,36 +26,40 @@
         </div>
     </nav>
 
-
-    <!-- Hero Section -->
-<section class="detailed-description-section">
-    <div class="hero-content-container">
-        <h1 class="hero-title">ParatAI</h1>
-        <p class="hero-subtitle">
-          Vi er en gruppe som har gjort oss bemerket gjennom produktene vi har presentert. 
-          Målet vårt er å fortsette å utvikle løsninger som er nyttige, brukervennlige og solide.
-        </p>
-       
-        <!-- YouTube video embed -->
-        <div class="video-container">
-            <iframe width="560" height="315" 
-                src="https://www.youtube.com/embed/gACAT6iqxRI"  
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-</section>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="detailed-description-section" aria-labelledby="hero-heading">
+            <div class="hero-content-container">
+                <h1 id="hero-heading" class="hero-title">ParatAI</h1>
+                <p class="hero-subtitle">
+                    Vi er en gruppe som har gjort oss bemerket gjennom produktene vi har presentert. 
+                    Målet vårt er å fortsette å utvikle løsninger som er nyttige, brukervennlige og solide.
+                </p>
+               
+                <!-- YouTube video embed -->
+                <div class="video-container">
+                    <iframe width="560" height="315" 
+                        src="https://www.youtube.com/embed/gACAT6iqxRI"  
+                        title="ParatAI introduksjonsvideo" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="main-footer" id="ijtj418">
         <div class="footer-container">
             <div class="footer-content" id="iehhin-2">
                 <div class="footer-column">
-                    <h4 class="column-title">Kontakt:</h4>
-                    <div class="contact-info">leneo12@student.uia.no</div>
+                    <h2 class="column-title">Kontakt:</h2>
+                    <div class="contact-info">
+                    <a href="mailto:leneo12@student.uia.no">leneo12@student.uia.no</a>
+                    </div>
                     <div class="project-info">IS-310 Prosjektgjennomføring</div>
                 </div>
             </div>
