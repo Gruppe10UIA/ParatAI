@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om oss - ParatAI</title>
+    <title>Bachelor - ParatAI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -30,54 +30,201 @@
 
     <!-- Main Content -->
     <main id="main-content">
-        <!-- Learning Reflection Section -->
+        <!-- Video Section -->
+        <section class="detailed-description-section" aria-labelledby="video-heading">
+            <div class="container">
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/iol7Y15lDWk?si=rNmlqe2v9sKEOUrf" 
+                        title="ParatAI prosjektvideo"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Description Section -->
         <section class="detailed-description-section" aria-labelledby="about-heading">
             <div class="container">
-                <h1 id="about-heading" class="section-title"><strong>Posjektbeskrivelse for ParatAI (Gruppe 10) hos Kartverket. </strong></h1>
+                <h1 id="about-heading" class="section-title"><strong>Prosjektbeskrivelse for ParatAI (Gruppe 10) hos Kartverket</strong></h1>
+                <p style="text-align: center; color: #6b7280; margin-bottom: 2rem;"><em>Sist oppdatert: 8. februar 2026</em></p>
+                
                 <div class="content-grid">
+                    <!-- Hensikt og mål -->
                     <div class="description-block">
                         <div class="text-content">
+                            <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: #4f46e5;">Hensikt og mål</h2>
                             <p class="description-text">
-                               Prosjektet gjennomføres i samarbeid med Kartverket, en statlig etat med ansvar for 
-                                Norges geografiske infrastruktur, eiendomsregister og nasjonale kartdata. Som offentlig 
-                                virksomhet stiller Kartverket høye krav til kvalitet, dokumentasjon, sikkerhet og 
-                                etterprøvbarhet, noe som påvirker både prosjektmetodikk og forventninger til leveranser. 
-                                Kunden er profesjonell, og både teknisk utforskende og har et tydelig samfunnsoppdrag 
-                                innen beredskap og krisehåndtering. 
-                        </div>
-                    </div>
-                    <div class="description-block">
-                        <div class="text-content">
-                            
+                                Parat-Bridge skal muliggjøre nær sanntids informasjonsutveksling mellom Heimevernets observasjonssystem (WaSOS) og sivile krisehåndteringsplattformer (Rayvn, CIM), slik at militære og sivile beredskapsaktører kan koordinere effektivt under hendelser uten behov for fysisk samlokalisering.
+                            </p>
+                            <p class="description-text" style="margin-top: 1rem;">
+                                <strong>Effektmål:</strong> Styrket totalforsvar gjennom bedre sivil-militær samhandling under kriser.
+                            </p>
                             <p class="description-text">
-                                Prosjektgruppen skal integrere WaSOS med Rayvn. Hvilket system som velges, avklares i 
-                                den innledende fasen av prosjektet, og integrasjonsarbeidet vil tilpasses dette.
-                            <p class="description-text">
-                                Prosjektet er faglig relevant fordi WaSOS er ny teknologi testet i storskala under Øvelse 
-                                Jøssing, og fordi integrasjon mellom militære observasjonssystemer og sivile 
-                                beredskapsplattformer representerer en høyst aktuell utfordring. Gruppen bygger videre 
-                                på innsikt fra tidligere feltarbeid i Agder, som avdekket tydelige samhandlings- og 
-                                kompetansegap mellom geodata- og beredskapsmiljøer. Dette gir både motivasjon og 
-                                retning for prosjektet.
+                                <strong>Resultatmål:</strong> En fungerende mellomvareløsning testet under realistiske forhold.
                             </p>
                         </div>
                     </div>
+
+                    <!-- Nåværende status -->
                     <div class="description-block">
                         <div class="text-content">
-                        
+                            <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: #4f46e5;">Nåværende status</h2>
                             <p class="description-text">
-                               Gjennomføring skjer med bruk av SCRUM, hyppige iterasjoner og med tett 
-                                samarbeid med flere interessenter og oppfølging fra oppdragsgiver. Arbeidet organiseres 
-                                i fire hovedfaser: foranalyse og kravavklaring, integrasjonsdesign, implementasjon av 
-                                dataflyt mellom Wasos og Rayvn. Oppgaven kan videre potensielt utvides med utvikling 
-                                av MCP-basert MVP. Test, evaluering og dokumentasjon inngår kontinuerlig. Prosjektet er 
-                                i skrivende stund fremdeles under revisjon og omfanget er ikke fullt fastsatt. 
+                                Prosjektet har etter første sprint oppnådd fungerende toveis meldingsflyt mellom WaSOS og Rayvn. Tekst synkroniseres nær sanntid mellom systemene med polling. Duplikathåndtering er løst gjennom tagg-markering og tidsstempelfiltrering.
+                            </p>
+                            <p class="description-text" style="margin-top: 1rem;">
+                                Møte med F24 (CIM-leverandør) er gjennomført. De vil sette sammen relevante moduler for et testmiljø - tidspunkt for tilgang er foreløpig ukjent.
+                            </p>
+                            <p class="description-text" style="margin-top: 1rem;">
+                                Kontakt er etablert med potensielle testaktører.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Løsningen -->
+                    <div class="description-block">
+                        <div class="text-content">
+                            <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: #4f46e5;">Løsningen</h2>
+                            <p class="description-text">
+                                Parat-Bridge er en mellomvare som kobler sammen eksisterende systemer uten å endre dem.
+                            </p>
+                            <p class="description-text" style="margin-top: 1rem;">
+                                <strong>Virkemåte:</strong> Når en hendelse oppstår, oppretter kommunen en logg i Rayvn og deler API-nøkkel med Heimevernet. Heimevernet oppretter et tilsvarende rom i WaSOS. Parat-Bridge synkroniserer deretter meldinger begge veier - det som skrives i WaSOS blir synlig i Rayvn, og omvendt.
+                            </p>
+                            <p class="description-text" style="margin-top: 1rem;">
+                                <strong>Tekniske rammer (per nå):</strong>
+                            </p>
+                            <ul style="margin-top: 0.5rem; margin-left: 1.5rem; list-style: disc;">
+                                <li class="description-text">Polling for å hente nye oppføringer</li>
+                                <li class="description-text">Manuell konfigurasjon per hendelse</li>
+                            </ul>
+                            <p class="description-text" style="margin-top: 1rem;">
+                                <strong>Avgrensninger:</strong> Systemet tolker eller prioriterer ikke informasjon - det gjør mennesker. Parat-Bridge erstatter ikke WaSOS, Rayvn eller CIM, men bygger bro mellom dem.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Usikkerheter og kritiske faktorer -->
+                    <div class="description-block">
+                        <div class="text-content">
+                            <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: #4f46e5;">Usikkerheter og kritiske faktorer</h2>
+                            <table style="width: 100%; border-collapse: collapse; margin-top: 0.5rem;">
+                                <thead>
+                                    <tr style="border-bottom: 2px solid #e5e7eb;">
+                                        <th style="text-align: left; padding: 0.5rem; font-weight: 600;">Usikkerhet</th>
+                                        <th style="text-align: left; padding: 0.5rem; font-weight: 600;">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">CIM-testmiljø</td>
+                                        <td style="padding: 0.5rem;">F24 forbereder moduler - tidspunkt ukjent</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">Testarena</td>
+                                        <td style="padding: 0.5rem;">Kjevik erstatter Jøssing - scenario må utvikles</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">Testaktører</td>
+                                        <td style="padding: 0.5rem;">Kontaktet - avventer respons</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="description-text" style="margin-top: 1rem;">
+                                <strong>Kritisk suksessfaktor:</strong> Løsningen må levere alle meldinger eller tydelig varsle at den ikke gjør det. Delvis levering er verre enn ingen levering.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Gjennomføringsplan -->
+                    <div class="description-block">
+                        <div class="text-content">
+                            <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: #4f46e5;">Gjennomføringsplan</h2>
+                            <table style="width: 100%; border-collapse: collapse; margin-top: 0.5rem;">
+                                <thead>
+                                    <tr style="border-bottom: 2px solid #e5e7eb;">
+                                        <th style="text-align: left; padding: 0.5rem; font-weight: 600;">Fase</th>
+                                        <th style="text-align: left; padding: 0.5rem; font-weight: 600;">Innhold</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">Sprint 1 (fullført)</td>
+                                        <td style="padding: 0.5rem;">Fungerende WaSOS-Rayvn synkronisering</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">Sprint 2 (pågår)</td>
+                                        <td style="padding: 0.5rem;">Kø/retry-logikk, CIM-utforskning, testscenario</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">Kommende</td>
+                                        <td style="padding: 0.5rem;">Testing på Kjevik eller CIEM situasjonsrom</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">Endelig leveranse</td>
+                                        <td style="padding: 0.5rem;">Bachelorrapport og dokumentert løsning</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Organisering -->
+                    <div class="description-block">
+                        <div class="text-content">
+                            <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: #4f46e5;">Organisering</h2>
+                            <p class="description-text">
+                                <strong>Prosjektgruppe:</strong> ParatAI - Gruppe 10, Universitetet i Agder
                             </p>
                             <p class="description-text">
-                               For å sikre suksess vil gruppen prioritere tydelig ressursstyring, regelmessige demoer og 
-                                god avgrensning. Prosjektet krever kompetanse i API-integrasjon, geodata, 
-                                datamodellering, frontend/backend, datasikkerhet og AI-teknologi. Gruppen har 
-                                relevant grunnkompetanse, men må utvikle ny innsikt i WaSOS og MCP. 
+                                <strong>Metodikk:</strong> SCRUM
+                            </p>
+                            <p class="description-text" style="margin-top: 1rem;">
+                                <strong>Interessenter:</strong>
+                            </p>
+                            <table style="width: 100%; border-collapse: collapse; margin-top: 0.5rem;">
+                                <thead>
+                                    <tr style="border-bottom: 2px solid #e5e7eb;">
+                                        <th style="text-align: left; padding: 0.5rem; font-weight: 600;">Aktør</th>
+                                        <th style="text-align: left; padding: 0.5rem; font-weight: 600;">Rolle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">Kartverket</td>
+                                        <td style="padding: 0.5rem;">Oppdragsgiver</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">Heimevernet / IBM</td>
+                                        <td style="padding: 0.5rem;">Produkteiere</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">F24/CIM</td>
+                                        <td style="padding: 0.5rem;">Systemleverandør</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">Rayvn</td>
+                                        <td style="padding: 0.5rem;">Systemleverandør</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">Tieto</td>
+                                        <td style="padding: 0.5rem;">Metodestøtte</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Prosjektgruppens bakgrunn -->
+                    <div class="description-block">
+                        <div class="text-content">
+                            <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: #4f46e5;">Prosjektgruppens bakgrunn</h2>
+                            <p class="description-text">
+                                Prosjektgruppen har relevant domenekunnskap fra tidligere semester, hvor det ble gjennomført 39 intervjuer med beredskapsledere på tvers av 25 kommuner i Agder. Dette ga innsikt i hvordan Rayvn brukes i praksis og brukernes behov for bedre koordineringsverktøy.
                             </p>
                         </div>
                     </div>
@@ -99,7 +246,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="copyright-text">© 2025 ParatAI. Alle rettigheter reservert.</p>
+                <p class="copyright-text">© 2026 ParatAI. Alle rettigheter reservert.</p>
             </div>
         </div>
     </footer>
