@@ -11,81 +11,33 @@
   const btnPlay = rotator.querySelector('.rotator-play');
   const dotsWrap = rotator.querySelector('.rotator-dots');
 
-// --- Settings ---
-const animDur = 400;                 // ms (CSS transition duration)
-const pauseMain = 11000;             // 11s per-step reading pause (post-intro if user presses Play)
-const pauseInitial = 2000;           // 2s per-step in the desktop intro round
-const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const isDesktop = window.matchMedia('(min-width: 768px)').matches;
+  const STEP_INTERVAL = 7000;
+  const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isDesktop = window.matchMedia('(min-width: 768px)').matches;
+  const N = cards.length;
 
-// --- State ---
-let autoplay = true;                 // master autoplay flag
-let inInitialTour = true;            // intro round flag (desktop only)
-let initialStepsDone = 0;            // count steps in intro (6 total)
-let stepTimer = null;
+  let featuredIndex = 0;
+  let autoplay = false;
+  let timer = null;
 
-// If NOT desktop: no intro, no autoplay
-if (!isDesktop) {
-  autoplay = false;
-  inInitialTour = false;
-}
-
-  // Respect reduced motion: no autoplay / no intro
-  if (prefersReduce) {
-    autoplay = false;
-    inInitialTour = false;
-  }
-
-  // Apply intro class on desktop only (hides details, enlarges photos via CSS)
-  if (isDesktop && !prefersReduce) {
-    rotator.classList.add('intro');
-  }
-
-  // --- Helpers ---
-  function assignPositions() {
-    cards.forEach((el, i) => el.setAttribute('data-position', String(i + 1)));
+  function applyPositions() {
+    cards.forEach((card, i) => {
+      const offset = (i - featuredIndex + N) % N;
+      card.setAttribute('data-position', String(offset + 1));
+    });
     updateDots();
   }
 
-function stepForward() {
- 
-  cards.forEach(el => {
-    const pos = Number(el.getAttribute('data-position'));
-    el.setAttribute('data-position', String(pos === 1 ? 6 : pos - 1));
-  });
-  updateDots();
-}
-
-function stepBackward() {
-
-  cards.forEach(el => {
-    const pos = Number(el.getAttribute('data-position'));
-    el.setAttribute('data-position', String(pos === 6 ? 1 : pos + 1));
-  });
-  updateDots();
-}
-
-  function jumpCardToFeatured(card) {
-    const targetPos = Number(card.getAttribute('data-position'));
-    if (targetPos === 1) return;
-
-    rotator.classList.add('no-animate'); // instant jump (no transition)
-
-    const shift = (6 - targetPos + 1) % 6; // how many forward steps to bring card to pos 1
-    for (let n = 0; n < shift; n++) {
-      cards.forEach(el => {
-        const pos = Number(el.getAttribute('data-position'));
-        el.setAttribute('data-position', String(pos === 6 ? 1 : pos + 1));
-      });
-    }
-
-    // Re-enable transitions
-    void rotator.offsetHeight;
-    rotator.classList.remove('no-animate');
-    updateDots();
+  function step(delta) {
+    featuredIndex = (featuredIndex + delta + N) % N;
+    applyPositions();
   }
 
-  // --- Dots ---
+  function jumpTo(i) {
+    featuredIndex = i;
+    applyPositions();
+  }
+
   function buildDots() {
     dotsWrap.innerHTML = '';
     cards.forEach((_, i) => {
@@ -93,68 +45,25 @@ function stepBackward() {
       dot.type = 'button';
       dot.className = 'rotator-dot';
       dot.setAttribute('role', 'tab');
-      dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
       dot.setAttribute('aria-label', `Medlem ${i + 1}`);
-      dot.addEventListener('click', () => {
-        pause();
-        jumpCardToFeatured(cards[i]);
-      });
+      dot.addEventListener('click', () => { pause(); jumpTo(i); });
       dotsWrap.appendChild(dot);
     });
   }
 
   function updateDots() {
-    const featuredIndex = cards.findIndex(el => el.getAttribute('data-position') === '1');
-    const dots = Array.from(dotsWrap.querySelectorAll('.rotator-dot'));
-    dots.forEach((d, i) => d.setAttribute('aria-selected', i === featuredIndex ? 'true' : 'false'));
+    dotsWrap.querySelectorAll('.rotator-dot').forEach((d, i) => {
+      d.setAttribute('aria-selected', i === featuredIndex ? 'true' : 'false');
+    });
   }
 
-  // --- Autoplay loop ---
-  function scheduleNext() {
-    clearTimeout(stepTimer);
-    if (!autoplay) return;
-
-    const delay = inInitialTour ? pauseInitial : pauseMain;
-
-    stepTimer = setTimeout(() => {
-      stepForward();
-
-      if (inInitialTour) {
-        initialStepsDone++;
-        if (initialStepsDone >= 6) {
-          // Intro done: stop autoplay and reveal all details
-          inInitialTour = false;
-          rotator.classList.remove('intro'); // CSS reveals roles/skills/description/socials
-          pause(); // stop autoplay after intro
-          return;  // do not schedule another step
-        }
-      }
-
-      // Continue only if still autoplaying (e.g., user pressed Play later)
-      scheduleNext();
-    }, delay);
-  }
-
-  // --- Controls ---
-  function pause() {
-    autoplay = false;
-    rotator.dataset.autoplay = 'false';
-    clearTimeout(stepTimer);
-    
-    // Failsafe: If pausing during intro, immediately show all details
-    if (inInitialTour) {
-      inInitialTour = false;
-      rotator.classList.remove('intro');
-    }
-    
-    if (btnPlay) {
-      btnPlay.setAttribute('aria-pressed', 'false');
-      btnPlay.textContent = 'Start';
-      btnPlay.setAttribute('aria-label', 'Start rotasjon');
-    }
+  function tick() {
+    step(1);
+    if (autoplay) timer = setTimeout(tick, STEP_INTERVAL);
   }
 
   function play() {
+    if (autoplay) return;
     autoplay = true;
     rotator.dataset.autoplay = 'true';
     if (btnPlay) {
@@ -162,57 +71,45 @@ function stepBackward() {
       btnPlay.textContent = 'Stopp';
       btnPlay.setAttribute('aria-label', 'Pause rotasjon');
     }
-    scheduleNext();
+    timer = setTimeout(tick, STEP_INTERVAL);
   }
 
-  if (btnNext) btnNext.addEventListener('click', () => { pause(); stepForward(); });
-  if (btnPrev) btnPrev.addEventListener('click', () => { pause(); stepBackward(); });
-  if (btnPlay) btnPlay.addEventListener('click', () => { if (autoplay) pause(); else play(); });
+  function pause() {
+    autoplay = false;
+    rotator.dataset.autoplay = 'false';
+    clearTimeout(timer);
+    if (btnPlay) {
+      btnPlay.setAttribute('aria-pressed', 'false');
+      btnPlay.textContent = 'Start';
+      btnPlay.setAttribute('aria-label', 'Start rotasjon');
+    }
+  }
 
-  // Clicking any card: pause + jump to featured (instant).
-  cards.forEach(card => {
+  if (btnNext) btnNext.addEventListener('click', () => { pause(); step(1); });
+  if (btnPrev) btnPrev.addEventListener('click', () => { pause(); step(-1); });
+  if (btnPlay) btnPlay.addEventListener('click', () => { autoplay ? pause() : play(); });
+
+  cards.forEach((card, i) => {
     card.addEventListener('click', () => {
-      if (card.getAttribute('data-position') === '1') {
-        if (autoplay) pause(); else play();
+      if (i === featuredIndex) {
+        autoplay ? pause() : play();
       } else {
         pause();
-        jumpCardToFeatured(card);
+        jumpTo(i);
       }
     });
   });
 
-  // Keyboard a11y
   rotator.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') { e.preventDefault(); pause(); stepForward(); }
-    if (e.key === 'ArrowLeft')  { e.preventDefault(); pause(); stepBackward(); }
-    if (e.key === ' ') {
-      const activeEl = document.activeElement;
-      if (rotator.contains(activeEl)) {
-        e.preventDefault();
-        if (autoplay) pause(); else play();
-      }
+    if (e.key === 'ArrowRight') { e.preventDefault(); pause(); step(1); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); pause(); step(-1); }
+    else if (e.key === ' ' && rotator.contains(document.activeElement)) {
+      e.preventDefault();
+      autoplay ? pause() : play();
     }
   });
 
-
-// --- Init ---
-buildDots();
-assignPositions();
-
-if (prefersReduce) {
-  // Reduced motion: no autoplay, no intro
-  autoplay = false;
-  inInitialTour = false;
-  pause();
-  rotator.classList.remove('intro');
-} else if (isDesktop) {
-  // Desktop only: start autoplay with intro
-  play();
-} else {
-  // Mobile: no autoplay, no intro
-  autoplay = false;
-  inInitialTour = false;
-  pause();
-  rotator.classList.remove('intro');
-}
+  buildDots();
+  applyPositions();
+  if (isDesktop && !prefersReduce) play();
 })();
