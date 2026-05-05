@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ParatAI</title>
+    <title>Bachelor - ParatAI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="cls-b0eeaj">
@@ -17,7 +18,7 @@
                     </a>
                 </div>
                 <ul class="navigation-menu" id="i7kr12e">
-                    <li><a class="gjs-t-link home-link active" href="index.html" id="i07ogcw" aria-current="page">Hjem</a></li>
+                    <li><a class="gjs-t-link about-link active" href="index.html" id="ibachelor" aria-current="page">Bachelor</a></li>
                     <li><a class="gjs-t-link about-link" href="status1.html" id="id8ftwv">Status 1</a></li>
                     <li><a class="gjs-t-link about-link" href="about.html" id="id3nrli">Om oss</a></li>
                     <li><a class="gjs-t-link assignment-link" href="medlemmer.html" id="ixyl926">Medlemmer</a></li>
@@ -29,14 +30,165 @@
 
     <!-- Main Content -->
     <main id="main-content">
-        <!-- Hero Section -->
-        <section class="detailed-description-section" aria-labelledby="hero-heading">
-            <div class="hero-content-container">
-                <h1 id="hero-heading" class="hero-title">ParatAI</h1>
-                <p class="hero-subtitle">
-                    Vi er en gruppe som har gjort oss bemerket gjennom produktene vi har presentert. 
-                    Målet vårt er å fortsette å utvikle løsninger som er nyttige, brukervennlige og solide.
-                </p>
+        <!-- Project Description Section -->
+        <section class="detailed-description-section" aria-labelledby="description-heading">
+            <div class="container">
+                <h1 id="description-heading" class="section-title"><strong>Prosjektbeskrivelse</strong></h1>
+
+                <div class="content-grid">
+                    <!-- Video Section -->
+                    <section class="detailed-description-section" aria-labelledby="video-heading">
+                        <div class="video-container">
+                            <iframe
+                                width="560"
+                                height="315"
+                                src="https://www.youtube-nocookie.com/embed/yg6UBg21Zfs?start=2"
+                                title="ParatAI – bachelorvideo"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </section>
+
+                    <!-- Oppdragsgiver -->
+                    <div class="description-block">
+                        <div class="text-content">
+                            <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Oppdragsgiver</h2>
+                            <p class="description-text">
+                                Oppdragsgiver er Kartverket Agder, ved Lars Fredrik Gyland. Kartverket har en egeninteresse i å synliggjøre og dokumentere gapet mellom totalforsvarets behov for felles situasjonsforståelse og det dagens systemer faktisk leverer, med mål om å bidra til endringer i det nasjonale systemlandskapet for krisehåndtering.
+                            </p>
+                            <p class="description-text" style="margin-top: 1rem;">
+                                Heimevernet HV-07 er produkteier og sluttbruker med et konkret behov for informasjonsutveksling med sivile aktører. IBM er systemleverandør av WaSOS og bidrar som teknisk rådgiver. Tieto har bidratt med metodisk veiledning. I tillegg har Rayvn, F24, Sivilforsvaret Agder, kommuner i Agder, Statsforvalteren i Agder og NKOM vært involvert I ulik grad gjennom intervjuer, møter og deltakelse på øvelser.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Hva prosjektet går ut på -->
+                    <div class="description-block">
+                        <div class="text-content">
+                            <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Hva prosjektet går ut på</h2>
+                            <p class="description-text">
+                                Norsk krisehåndtering bygger på totalforsvarsprinsippet, der sivile og militære aktører skal samvirke effektivt. En grunnleggende forutsetning er tilgang til et felles situasjonsbilde. I dag opererer disse aktørene på adskilte digitale plattformer uten direkte informasjonsutveksling. Konsekvensen er at samme informasjon registreres flere ganger, og at koordinering oftest hviler på telefonsamtaler, e-post-korrespondanse og fysisk tilstedeværelse av liaisoner.
+                            </p>
+                            <p class="description-text" style="margin-top: 1rem;">
+                                Gruppen har gjennom prosjektperioden utviklet Parat-Bridge, en mellomvareprototype som muliggjør toveis synkronisering av meldinger mellom en Rayvn logg og en WaSOS chat per kobling, med filer og posisjonsdata mellom Heimevernets rapporteringssystem WaSOS og de sivile krise- og beredskapshåndteringssystemene Rayvn og CIM, uten å kreve endringer i de eksisterende systemene. Løsningen er bygget slik at nye krisehåndteringssystemer kan kobles til ved å legge til avgrensede moduler, fremfor å utvikle én ny integrasjon for hver kombinasjon av systemer.
+                            </p>
+                            <p class="description-text" style="margin-top: 1rem;">
+                                Prosjektet har sitt utspring i en kartleggingsstudiegruppe gjennomførte for Kartverket Agder høsten 2025, som del av et praksisopphold. Studien dokumenterte konkrete koordineringsutfordringer mellom beredskapsaktører i regionen og fanget oppmerksomheten til HV-07. Det opprinnelig planlagte prosjektet ble da omdefinert til å utforske digital sivil-militær informasjonsutveksling.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Utfordringer og kompleksitet -->
+                    <div class="description-block">
+                        <div class="text-content">
+                            <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Utfordringer og kompleksitet</h2>
+                            <ul style="margin-top: 0.5rem; margin-left: 1.5rem; list-style: disc;">
+                                <li class="description-text"><strong>Heterogent systemlandskap:</strong> Tre ulike systemer (WaSOS, Rayvn, CIM) med vesentlig forskjellige API-er, dataformater og autentiseringsmekanismer måtte integreres gjennom én felles mellomvare.</li>
+                                <li class="description-text"><strong>Organisatorisk kompleksitet:</strong> Over ti interessenter fra militær, sivil og privat sektor med ulike perspektiver, prioriteringer og beslutningskjeder.</li>
+                                <li class="description-text"><strong>Ekstern usikkerhet:</strong> Seks uker uten NDA-avklaring for CIM-tilgang, opphør av dialog med Rayvn, og bortfall av planlagt øvelsesarena.</li>
+                                <li class="description-text"><strong>Parallell utvikling i Node-RED:</strong> Plattformen lagrer hele flytkonfigurasjonen i én JSON-fil, noe som skapte merge-konflikter ved samtidig utvikling.</li>
+                                <li class="description-text"><strong>Fil- og posisjonsdeling:</strong> Rayvn lagrer filer via ekstern server, som ikke er tilgjengeliggjort gjennom Rayvns API. I tillegg er eksponering av geodata veldig begrenset.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Teknologi og løsninger -->
+                    <div class="description-block">
+                        <div class="text-content">
+                            <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Teknologi og løsninger</h2>
+                            <p class="description-text">
+                                Parat-Bridge er realisert som en lettvekts integrasjonsmellomvare bygget på Node-RED, et åpent kildekodeverktøy for flytbasert programmering. Løsningen kjører i en Docker-container og konfigureres gjennom et webbasert grensesnitt. Arkitekturen er basert på etablerte integrasjonsmønstre:
+                            </p>
+                            <ul style="margin-top: 0.5rem; margin-left: 1.5rem; list-style: disc;">
+                                <li class="description-text"><strong>Message Broker</strong> — sentralt mellomledd som frikobler avsender og mottaker.</li>
+                                <li class="description-text"><strong>Pipes and Filters</strong> — sekvensiell pipeline for innhenting, normalisering, køing og levering.</li>
+                                <li class="description-text"><strong>Kanonisk datamodell</strong> — alle meldinger konverteres til et felles internt format.</li>
+                                <li class="description-text"><strong>Adapter-mønsteret</strong> — systemspesifikk logikk isolert til dedikerte adaptere.</li>
+                                <li class="description-text"><strong>Guaranteed Delivery</strong> — persistert kø-datastruktur med retry-logikk for pålitelig levering.</li>
+                            </ul>
+                            <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                                <thead>
+                                    <tr style="border-bottom: 2px solid #e5e7eb;">
+                                        <th style="text-align: left; padding: 0.5rem; font-weight: 600;">Komponent</th>
+                                        <th style="text-align: left; padding: 0.5rem; font-weight: 600;">Detaljer</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">Plattform</td>
+                                        <td style="padding: 0.5rem;">Node-RED (flytbasert programmering, Node.js)</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">Kjøremiljø</td>
+                                        <td style="padding: 0.5rem;">Docker-container</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">Versjonskontroll</td>
+                                        <td style="padding: 0.5rem;">Git / GitHub med branching-strategi og kode-review</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">Prosjektstyring</td>
+                                        <td style="padding: 0.5rem;">Scrum (2-ukers sprinter), Trello med tidsregistrering</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">Validering</td>
+                                        <td style="padding: 0.5rem;">Scenariodrevne funksjonsøvelser</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                                        <td style="padding: 0.5rem;">Integrasjoner</td>
+                                        <td style="padding: 0.5rem;">WaSOS API (IBM), Rayvn API, CIM API (F24)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Produkt og resultat -->
+                    <div class="description-block">
+                        <div class="text-content">
+                            <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Produkt og resultat</h2>
+                            <p class="description-text">
+                                Ved innlevering er Parat-Bridge en fungerende prototype med følgende funksjonalitet:
+                            </p>
+                            <ul style="margin-top: 0.5rem; margin-left: 1.5rem; list-style: disc;">
+                                <li class="description-text">Toveis meldingssynkronisering mellom en WaSOS-chat og en Rayvnlogg per kobling.</li>
+                                <li class="description-text">Enveis backfill: tidligere meldinger i Rayvn-logg overføres til WaSOS ved oppkobling.</li>
+                                <li class="description-text">Fil- og bildeoverføring med automatisk komprimering.</li>
+                                <li class="description-text">Deling av geografisk posisjon som kartpunkt mellom systemene.</li>
+                                <li class="description-text">Persistering av tilstand: aktive forbindelser og meldingskø overlever omstart.</li>
+                                <li class="description-text">Driftsavbruddsvarsling: brukere varsles ved både oppkobling og avslutning.</li>
+                                <li class="description-text">Køhåndtering med retry-logikk og automatisk deaktivering ved gjentatte feil.</li>
+                                <li class="description-text">Webbasert konfigurasjonsgrensesnitt for oppsett og overvåking av forbindelser.</li>
+                                <li class="description-text">Agnostisk arkitektur: nye systemer kobles til med enkle adaptere uten ombygging av kjernen.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Validering gjennom øvelser -->
+                    <div class="description-block">
+                        <div class="text-content">
+                            <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Validering gjennom øvelser</h2>
+                            <p class="description-text">
+                                For å validere løsningen ble det gjennomført to øvelser med reelle beredskapsaktører fra kommunal beredskap, Sivilforsvaret og HV-07, arrangert på gruppens eget initiativ:
+                            </p>
+                            <p class="description-text" style="margin-top: 1rem;">
+                                <strong>Forøvelse (9. april, CIEM Campus Kristiansand):</strong> Kontrollert evaluering med samme scenario kjørt to ganger, først uten, deretter med Parat-Bridge. Samtlige deltakere rapporterte raskere oppnåelse av situasjonsoversikt og styrket felles situasjonsbilde med Parat-Bridge aktivert.
+                            </p>
+                            <p class="description-text" style="margin-top: 1rem;">
+                                <strong>Hovedøvelse (16. april, Kjevik militærleir):</strong> Scenariodrevet funksjonsøvelse med eskalerende hendelser fra forøvelsen. Alle meldinger ble synkronisert uten tap. HV-07 rapporterte direkte taktisk verdi av posisjonsdeling, og kunne varsle egne soldater om fare før formell melding forelå.
+                            </p>
+                            <p class="description-text" style="margin-top: 1.5rem; text-align: center;">
+                                <strong><em>Sentralt funn:</em></strong>
+                            </p>
+                            <p class="description-text" style="text-align: center; font-style: italic;">
+                                Øvelsene viste at når den tekniske integrasjonen fungerer, forskyves problembildet fra teknisk til organisatorisk. Spørsmålet blir hvem som skal dele hva med hvem, ikke om informasjon kan deles digitalt.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -54,7 +206,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="copyright-text">© 2025 ParatAI. Alle rettigheter reservert.</p>
+                <p class="copyright-text">© 2026 ParatAI. Alle rettigheter reservert.</p>
             </div>
         </div>
     </footer>
