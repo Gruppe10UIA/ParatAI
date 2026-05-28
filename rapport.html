@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport - Integrasjon mellom militært rapporteringssystem
+og sivile krisehåndteringsverktøy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pdf-embed {
+            width: 100%;
+            height: 80vh;
+            min-height: 500px;
+            margin-top: 1.5rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #f9fafb;
+        }
+        .pdf-embed iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+        .download-button {
+            display: inline-block;
+            background-color: rgb(107 33 168 / 1);
+            color: #fff;
+            padding: 0.6rem 1.4rem;
+            border-radius: 0.4rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .download-button:hover,
+        .download-button:focus {
+            background-color: rgb(88 28 135 / 1);
+        }
+        .report-intro {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .report-fallback {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        @media (max-width: 640px) {
+            .pdf-embed { height: 70vh; min-height: 360px; }
+        }
+    </style>
+</head>
+<body class="cls-b0eeaj">
+    <!-- Main Navigation -->
+    <nav class="main-navigation" id="iq5uw" aria-label="Hovednavigasjon">
+        <div class="navigation-container" id="isatj">
+            <div class="navigation-layout" id="i9dob">
+                <div class="logo-container" id="iy2b6">
+                    <a id="i7q7q" href="index.html" aria-label="ParatAI hjem" style="all:unset; display: flex; align-items: center;">
+                        <img src="images/stor paratai logo.svg" alt="ParatAI logo">
+                    </a>
+                </div>
+                <ul class="navigation-menu" id="i7kr12e">
+                    <li><a class="gjs-t-link home-link" href="index.html">Bachelor</a></li>
+                    <li><a class="gjs-t-link status-link" href="rapport.html">Rapport</a></li>
+                    <li><a class="gjs-t-link about-link" href="medlemmer.html">Om oss</a></li>
+                    <li><a class="gjs-t-link reflection-link" href="reflection.html">Andre prosjekter</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script>
+        (function () {
+            var page = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.navigation-menu a').forEach(function (link) {
+                if (link.getAttribute('href') === page) {
+                    link.classList.add('active');
+                    link.setAttribute('aria-current', 'page');
+                }
+            });
+        })();
+    </script>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="detailed-description-section" aria-labelledby="rapport-heading">
+            <div class="container" style="max-width: 64rem;">
+                <h1 id="rapport-heading" class="section-title"><strong>Rapport</strong></h1>
+
+                <div class="report-intro">
+                    <p class="description-text">
+                        Her kan du lese bacheloroppgaven vår. Bla i dokumentet under, eller last det ned for å lese det offline.
+                    </p>
+                    <p>
+                        <a class="download-button" href="placeholder.pdf" download>
+                            <i class="fa-solid fa-download" aria-hidden="true"></i> Last ned rapporten (PDF)
+                        </a>
+                    </p>
+                </div>
+
+                <div class="pdf-embed">
+                    <iframe src="placeholder.pdf"
+                            title="ParatAI – bacheloroppgave (PDF)"
+                            loading="lazy"></iframe>
+                </div>
+
+                <p class="report-fallback">
+                    Får du ikke vist dokumentet i nettleseren?
+                    <a href="placeholder.pdf" target="_blank" rel="noopener">Åpne PDF-en i ny fane</a>.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer" id="ijtj418">
+        <div class="footer-container">
+            <div class="footer-content" id="iehhin-2">
+                <div class="footer-column">
+                    <h2 class="column-title">Kontakt:</h2>
+                    <div class="contact-info">
+                    <a href="mailto:leneo12@student.uia.no">leneo12@student.uia.no</a>
+                    </div>
+                    <div class="project-info">IS-314-1 26V Bacheloroppgave i IT og informasjonssystemer</div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright-text">© 2025 ParatAI. Alle rettigheter reservert.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
