@@ -11,7 +11,7 @@
   const btnPlay = rotator.querySelector('.rotator-play');
   const dotsWrap = rotator.querySelector('.rotator-dots');
 
-  const STEP_INTERVAL = 7000;
+  const STEP_INTERVAL = 9000;
   const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isDesktop = window.matchMedia('(min-width: 768px)').matches;
   const N = cards.length;
