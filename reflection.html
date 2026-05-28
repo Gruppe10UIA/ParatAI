@@ -18,15 +18,25 @@
                     </a>
                 </div>
                 <ul class="navigation-menu" id="i7kr12e">
-                    <li><a class="gjs-t-link about-link" href="index.html">Bachelor</a></li>
-                    <li><a class="gjs-t-link about-link" href="status1.html">Status 1</a></li>
-                    <li><a class="gjs-t-link about-link" href="about.html">Om oss</a></li>
-                    <li><a class="gjs-t-link assignment-link" href="medlemmer.html">Medlemmer</a></li>
-                    <li><a class="gjs-t-link reflection-link active" href="reflection.html">Prosjekter</a></li>
+                    <li><a class="gjs-t-link home-link" href="index.html">Bachelor</a></li>
+                    <li><a class="gjs-t-link status-link" href="rapport.html">Rapport</a></li>
+                    <li><a class="gjs-t-link about-link" href="medlemmer.html">Om oss</a></li>
+                    <li><a class="gjs-t-link reflection-link" href="reflection.html">Andre prosjekter</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    <script>
+        (function () {
+            var page = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.navigation-menu a').forEach(function (link) {
+                if (link.getAttribute('href') === page) {
+                    link.classList.add('active');
+                    link.setAttribute('aria-current', 'page');
+                }
+            });
+        })();
+    </script>
 
     <!-- Main Content -->
     <main id="main-content">
